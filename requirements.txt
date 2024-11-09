@@ -6,3 +6,5 @@ mlflow
 flask
 dvc
 matplotlib
+xgboost
+ipykernel
