@@ -6,8 +6,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-from src.logger import logger_example
-from src.exception import CustomException
+from src.logger.logger_example import logger_example
+from src.exception.exception import CustomException
 
 from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error, mean_squared_log_error
 
@@ -35,7 +35,7 @@ def evaluate_models(X_train, y_train, X_test, y_test, models):
             model.fit(X_train, y_train)
 
             # Make predictions
-            y_train_pred = model.predict(X_train)
+            # y_train_pred = model.predict(X_train)
             y_test_pred = model.predict(X_test)
 
             # Calculate metrics
