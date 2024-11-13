@@ -68,5 +68,5 @@ def load_object(file_path):
         return obj
     except Exception as e:
         logger_example.error(f"Error occurred while loading object: {str(e)}")
-        return None
+        return CustomException(e,sys)
     
