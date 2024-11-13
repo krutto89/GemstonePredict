@@ -5,4 +5,5 @@ flake8
 mypy
 tox==3.25.1
 
+-e .
 

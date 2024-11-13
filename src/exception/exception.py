@@ -1,10 +1,10 @@
 import sys
 
 # Custom exception class
-class customException(Exception):
+class CustomException(Exception):
 
     def __init__(self, error_message,error_details:sys):
-        # super().__init__()
+        super().__init__()
         self.error_message = error_message
         _,_,exc_tb = error_details.exc_info()
 
@@ -14,13 +14,6 @@ class customException(Exception):
         return "Error occured in python script name[{0}] line number [{1}] error message[{2}]".format(
             self.filename, self.lineno, str(self.error_message)
         )
-
-
-if __name__ == '__main__':
-    try:
-        1/0
-    except Exception as e:
-        raise customException(e, sys)
 
 
 

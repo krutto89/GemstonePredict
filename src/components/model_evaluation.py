@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
-from src.logger import logger_example
-from src.exception import CustomException
+from src.logger.logger_example import logger_example
+from src.exception.exception import CustomException
 from sklearn.metrics import accuracy_score,mean_squared_error
 from urllib.parse import urlparse
 import mlflow
@@ -14,7 +14,7 @@ import os
 import sys
 from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
-from pathlib import path
+from pathlib import Path
 from sklearn.preprocessing import StandardScaler,OrdinalEncoder
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
@@ -33,10 +33,10 @@ class ModelEvaluation:
     def __init__(self):
         pass
 
-    def initiate_model_evaluation(self):
+    def initiate_model_evaluation(self,train_array,test_array):
         try:
             pass
         except Exception as e:
-            logging.error(f"Error occured at {CustomException.get_error_details(e,sys)}")
-            raise CustomException(e,sys)
+          logging.info()
+          raise CustomException(e,sys)
         
